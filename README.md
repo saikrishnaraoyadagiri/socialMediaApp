@@ -1,5 +1,7 @@
 
 Detailed Steps to execute the Project
+
+
 MySQL:
 1.	Download the mysql server from this link  https://dev.mysql.com/downloads/mysql/8.0.html
 2.	Open the link and click on recommended msi download
