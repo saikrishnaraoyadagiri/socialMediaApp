@@ -92,10 +92,10 @@ ENGINE=InnoDB
 
 Front End:
 1.	After unzipping the file, open the projectFinal folder in the visual studio code Editor
-2.	Now open the terminal, your path will be till projectFinal. So Navigate to project folder which is inside the projectFinal folder with”cd” the command in point 3
+2.	Now open the terminal, your path will be till projectFinal. So Navigate to project folder which is inside the projectFinal folder and then install dependendencies from package and run the front end with these commands
 3.	cd project
-4.	then Run “npm  i”
-5.	then Run “ npm  start”
+4.	npm  i
+5.	npm  start
 
 Back End:
 1.	Open the pyFinal folder in a new window of visual studio code
