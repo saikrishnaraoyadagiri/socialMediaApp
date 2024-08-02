@@ -1,0 +1,73 @@
+activate env ->python -m venev venev 
+run the project-> python app.py 
+
+create db  as -> social_media
+
+
+CREATE TABLE `comments` (
+	`comment_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`post_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`user_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`comment_text` TEXT NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_ts` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0',
+	PRIMARY KEY (`comment_id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `follows` (
+	`follower_id` VARCHAR(128) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`followed_id` VARCHAR(128) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_ts` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0',
+	`status` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+	PRIMARY KEY (`follower_id`, `followed_id`) USING BTREE,
+	INDEX `followed_id` (`followed_id`) USING BTREE,
+	CONSTRAINT `follows_ibfk_1` FOREIGN KEY (`follower_id`) REFERENCES `user_details` (`user_id`) ON UPDATE NO ACTION ON DELETE NO ACTION,
+	CONSTRAINT `follows_ibfk_2` FOREIGN KEY (`followed_id`) REFERENCES `user_details` (`user_id`) ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
+
+
+CREATE TABLE `likes` (
+	`like_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`post_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`user_id` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_ts` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0',
+	PRIMARY KEY (`like_id`) USING BTREE,
+	UNIQUE INDEX `post_id` (`post_id`, `user_id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
+
+
+CREATE TABLE `post` (
+	`post_id` VARCHAR(50) NOT NULL DEFAULT '' COLLATE 'utf8mb4_0900_ai_ci',
+	`user_id` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`text_content` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`content_url` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`created_ts` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0',
+	PRIMARY KEY (`post_id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `user_details` (
+	`user_id` VARCHAR(128) NOT NULL DEFAULT '' COLLATE 'utf8mb4_0900_ai_ci',
+	`user_name` VARCHAR(64) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`password` VARCHAR(64) NOT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`name` VARCHAR(64) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`email` VARCHAR(64) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`gender` VARCHAR(64) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`bio` VARCHAR(64) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`image` LONGTEXT NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	`dob` VARCHAR(64) NULL DEFAULT NULL COLLATE 'utf8mb4_0900_ai_ci',
+	PRIMARY KEY (`user_id`) USING BTREE
+)
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB
+;

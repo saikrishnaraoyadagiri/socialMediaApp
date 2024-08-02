@@ -1,0 +1,61 @@
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh; 
+    background-color: #f0f0f0;
+    border-radius: 25px;
+  }
+  .icon{
+    cursor: pointer;
+    position: relative;
+    margin-top: 2vh;
+    margin-right: 1vh;
+  }
+
+.profile{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    float: right;
+    margin-top: 1vh;
+}
+.bar{
+  display: flex;
+  color: black;
+  FLOAT: right;
+  margin-right: 6vh;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.dropdown-trigger i {
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-left: -7vh;
+  color: black;
+}

@@ -1,0 +1,36 @@
+.Leftbar {
+    
+    position: fixed; 
+    width: 20vw; 
+        height: 100vh; 
+        left: 0; 
+        top: 0; 
+        background-color: #f0f0f0; 
+        padding: 1rem; 
+}
+
+.LeftbarScreen {
+    position: fixed;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.LeftbarList {
+    padding: 20px;
+    list-style: none;
+}
+
+.LeftbarListItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+.LeftbarIcon {
+    margin-right: 15px;
+}

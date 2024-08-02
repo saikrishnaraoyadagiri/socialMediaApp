@@ -1,0 +1,81 @@
+.homepageContainer {
+    display: flex;
+    width: 100%;
+}
+
+.postHeader {
+    width: 60vw;
+    float: right;
+     margin-right: 9vw;
+    height: 7vh;
+    background: white;
+    margin-left: 3vw;
+    border-radius: 10px;
+    margin-top: 10vh;
+}
+
+.user_image {
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 7vh;
+    height: 7vh;
+    display: inline;
+    float: left;
+    border-radius: 50%;
+    align-items: flex-start;
+    display: flex;
+}
+
+.user_name {
+    display: inline;
+    float: left;
+    margin-top: 1.5vh;
+}
+
+.post_image {
+    width: 60vw;
+    float: right;
+     margin-right: 9vw;
+    height: 30vw;
+
+}
+
+.postFooter {
+    width: 60vw;
+    float: right;
+     margin-right: 9vw;
+    height: 3vw;
+    margin-left: 3vw;
+    background-color: white;   
+     display: flex;
+    align-items: center;
+}
+
+.postFooterImages {
+    height: 3vw;
+    width: 3vw;
+    float: left;
+}
+
+.titleBox {
+    width: 60vw;
+    float: right;
+     margin-right: 9vw;
+    margin-left: 3vw;
+    background: white;
+    text-align: left;
+}
+
+.space_10 {
+    height: 5vw;
+}
+
+
+
+
+
+.first{
+    width: 100vw;
+    height: 80vh;
+}

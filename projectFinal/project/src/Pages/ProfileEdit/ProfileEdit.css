@@ -1,0 +1,218 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 15vh;
+  }
+  
+  .profile-header h1 {
+    font-size: 24px;
+    color: white;
+    margin-top: 3vh;
+
+  }
+  
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .user-details {
+    flex: 1; 
+  }
+  
+  .user-details h2 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .user-details p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #aaa;
+  }
+  
+  .email,
+  .username,
+  .password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .email span:first-child,
+  .username span:first-child,
+  .password span:first-child {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column-reverse;     }
+  
+    .profile-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;     }
+  
+    .profile-info img {
+      margin: 0 auto 10px auto; 
+    }
+  
+    .user-details {
+      margin-bottom: 20px; 
+    }
+  }
+  
+  .profile-container {
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .user-details p {
+    color: #666; 
+  }
+  
+
+  @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+
+html, body{
+  background:#2F1E27;
+}
+
+body{
+  counter-reset:section;
+  text-align:center;
+}
+
+.container{
+  position:relative;
+  top:100px;
+}
+
+.container h1, .container span{
+  font-family:"Pt Sans", helvetica, sans-serif;
+}
+
+.container h1{
+  text-align:center;
+  color:#fff;
+  font-weight:100;
+  font-size:2em; 
+  margin-bottom:10px;
+}
+
+.container h2{
+  font-family:"droid serif";
+  font-style:italic;
+  color:#d3b6ca; 
+  text-align:center;
+  font-size:1.2em;
+}
+
+.container form span:before {
+  counter-increment:section;
+  content:counter(section);
+  border:2px solid #4c2639;
+  width:40px;
+  height:40px;
+  color:#fff;
+  display:inline-block;
+  border-radius:50%;
+  line-height:1.6em;
+  font-size:1.5em;
+  position:relative;
+  left:-22px;
+  top:-11px;
+  background:linear-gradient(to bottom, #0f0c29, #302b63, #24243e);;
+}
+
+form{
+  display:inline-block;
+}
+
+.fields{
+  border-left:2px solid linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.container span{
+    margin-bottom:22px; 
+    display:inline-block;
+}
+
+.container span:last-child{
+   margin-bottom:-11px;
+}
+
+input{
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:34px;
+  vertical-align:middle;
+  position:relative;
+  bottom:14px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px; 
+}
+
+input[type="button"]{ 
+  background:linear-gradient(to bottom, #0f0c29, #302b63, #24243e)! important;
+  color:#fff;
+  position:relative;
+  left:9px;
+  top:25px; 
+  width:100px;
+  cursor:pointer;
+}
+
+.back{
+    color: white;
+}
+
+.first3{
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100vw;
+}
+.immagee{
+  width: 50vh;
+    height: 50vh;
+    margin-right: 4vw;
+}
